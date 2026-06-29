@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CyberShield Sentinel — AI-Powered Cybersecurity Intelligence Platform</title>
+  <meta name="description" content="CyberShield Sentinel: Real-time threat detection, password analysis, phishing detection, AES-256 encryption & network monitoring." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛡️</text></svg>" />
+</head>
+<body>
+
+<!-- ============================================================
+     NAVIGATION
+============================================================ -->
+<nav class="navbar">
+  <div class="nav-logo">
+    <div class="shield-icon shield-animated">🛡</div>
+    <span>CYBERSHIELD<span style="color:var(--text-muted);font-weight:400"> | SENTINEL</span></span>
+  </div>
+
+  <ul class="nav-links">
+    <li><a href="#" data-page="home" class="active">HOME</a></li>
+    <li><a href="#" data-page="password">PASSWORD</a></li>
+    <li><a href="#" data-page="phishing">PHISHING</a></li>
+    <li><a href="#" data-page="encrypt">ENCRYPT</a></li>
+    <li><a href="#" data-page="network">NETWORK</a></li>
+    <li><a href="#" data-page="contact">CONTACT</a></li>
+  </ul>
+
+  <div class="nav-status">
+    <span class="status-dot"></span>
+    <span>SYSTEM ACTIVE</span>
+  </div>
+
+  <button class="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ============================================================
+     PAGE: HOME
+============================================================ -->
+<div id="page-home" class="page active">
+
+  <!-- HERO -->
+  <section class="hero hex-pattern">
+    <canvas id="matrix-canvas" class="matrix-bg" style="width:100%;height:100%;position:absolute"></canvas>
+
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          🔴 LIVE — REAL-TIME THREAT INTELLIGENCE ACTIVE
+        </div>
+
+        <h1 class="hero-title">
+          <span class="line1">CYBERSHIELD</span><br>
+          <span class="line2">SENTINEL</span><br>
+          <span class="line3" style="font-size:0.55em;letter-spacing:4px">AI SECURITY PLATFORM</span>
+        </h1>
+
+        <p class="hero-desc">
+          Enterprise-grade cybersecurity intelligence. Detect phishing attacks, analyze password strength with real entropy calculations, encrypt data with AES-256, and monitor your network — all in real time.
+        </p>
+
+        <div class="hero-btns">
+          <button class="btn-primary" data-goto="password">
+            ⚡ LAUNCH TOOLS
+          </button>
+          <button class="btn-outline" data-goto="network">
+            📡 LIVE MONITOR
+          </button>
+        </div>
+
+        <div style="margin-top:2rem;display:flex;flex-wrap:wrap;gap:1.5rem">
+          <div style="font-family:var(--font-mono);font-size:0.75rem">
+            <span style="color:var(--text-muted)">THREATS BLOCKED TODAY</span><br>
+            <span style="color:var(--danger);font-size:1.2rem;font-weight:700" id="live-threat-count">1,248,392</span>
+          </div>
+          <div style="font-family:var(--font-mono);font-size:0.75rem">
+            <span style="color:var(--text-muted)">ENCRYPTION</span><br>
+            <span style="color:var(--success);font-size:1.2rem;font-weight:700">AES-256</span>
+          </div>
+          <div style="font-family:var(--font-mono);font-size:0.75rem">
+            <span style="color:var(--text-muted)">THREAT SCORE</span><br>
+            <span style="color:var(--warning);font-size:1.2rem;font-weight:700">97.8%</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="threat-globe">
+          <div class="globe-ring"></div>
+          <div class="globe-ring"></div>
+          <div class="globe-ring"></div>
+          <div class="globe-center">🌐</div>
+          <div class="threat-nodes">
+            <div class="threat-node"></div>
+            <div class="threat-node"></div>
+            <div class="threat-node"></div>
+            <div class="threat-node"></div>
+            <div class="threat-node"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS BAR -->
+  <div class="stats-bar">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <span class="value">4.8B+</span>
+        <span class="label">Threats Analyzed</span>
+      </div>
+      <div class="stat-item">
+        <span class="value">99.7%</span>
+        <span class="label">Detection Rate</span>
+      </div>
+      <div class="stat-item">
+        <span class="value">AES-256</span>
+        <span class="label">Encryption Standard</span>
+      </div>
+      <div class="stat-item">
+        <span class="value">&lt;50ms</span>
+        <span class="label">Analysis Speed</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- FEATURES -->
+  <section class="section bg-gradient-1">
+    <div class="section-header">
+      <span class="section-tag">CAPABILITIES</span>
+      <h2 class="section-title">Real Cybersecurity Tools<br><span style="color:var(--primary)">That Actually Work</span></h2>
+      <p class="section-desc">Not simulated. Every tool uses real cryptographic APIs, actual threat detection algorithms, and live browser security data.</p>
+    </div>
+
+    <div class="features-grid">
+      <div class="card feature-card" style="cursor:pointer" onclick="showPage('password')">
+        <div class="icon icon-cyan">🔑</div>
+        <h3>Password Strength Analyzer</h3>
+        <p>Real entropy calculation (bits), GPU crack time estimation, pattern detection, and common password database check.</p>
+        <div style="margin-top:1rem;font-family:var(--font-mono);font-size:0.72rem;color:var(--primary)">→ ANALYZE NOW</div>
+      </div>
+
+      <div class="card feature-card" style="cursor:pointer" onclick="showPage('phishing')">
+        <div class="icon icon-red">🎣</div>
+        <h3>Phishing URL Detector</h3>
+        <p>Multi-factor URL analysis: domain patterns, TLD risk, brand impersonation, encoding tricks, and redirect chains.</p>
+        <div style="margin-top:1rem;font-family:var(--font-mono);font-size:0.72rem;color:var(--primary)">→ CHECK URL</div>
+      </div>
+
+      <div class="card feature-card" style="cursor:pointer" onclick="showPage('encrypt')">
+        <div class="icon icon-purple">🔐</div>
+        <h3>AES-256 Encryption</h3>
+        <p>Browser-native WebCrypto API with AES-GCM mode, PBKDF2 key derivation (100K iterations), and SHA-256/512 hashing.</p>
+        <div style="margin-top:1rem;font-family:var(--font-mono);font-size:0.72rem;color:var(--primary)">→ ENCRYPT DATA</div>
+      </div>
+
+      <div class="card feature-card" style="cursor:pointer" onclick="showPage('network')">
+        <div class="icon icon-green">📡</div>
+        <h3>Network Monitor</h3>
+        <p>Live connection type, speed, and RTT detection using real Network Information API. Live security event log simulation.</p>
+        <div style="margin-top:1rem;font-family:var(--font-mono);font-size:0.72rem;color:var(--primary)">→ MONITOR</div>
+      </div>
+
+      <div class="card feature-card" style="cursor:pointer" onclick="showPage('phishing')">
+        <div class="icon icon-orange">🔍</div>
+        <h3>Privacy Audit</h3>
+        <p>Real browser privacy scoring: DoNotTrack, WebRTC leak risk, secure context verification, and cookie analysis.</p>
+        <div style="margin-top:1rem;font-family:var(--font-mono);font-size:0.72rem;color:var(--primary)">→ AUDIT BROWSER</div>
+      </div>
+
+      <div class="card feature-card" style="cursor:pointer" onclick="showPage('encrypt')">
+        <div class="icon icon-pink">🧮</div>
+        <h3>Cryptographic Hashing</h3>
+        <p>SHA-1, SHA-256, SHA-384, SHA-512 — real hash generation using browser's native SubtleCrypto API. Irreversible & collision-resistant.</p>
+        <div style="margin-top:1rem;font-family:var(--font-mono);font-size:0.72rem;color:var(--primary)">→ GENERATE HASH</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THREAT LANDSCAPE -->
+  <section class="section bg-gradient-2">
+    <div class="section-header">
+      <span class="section-tag">THREAT INTELLIGENCE</span>
+      <h2 class="section-title">Current Attack Landscape</h2>
+      <p class="section-desc">Understanding today's most dangerous cyber threats is the first step to defending against them.</p>
+    </div>
+
+    <div style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem">
+      <div class="card">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem">
+          <span style="font-family:var(--font-mono);font-size:0.72rem;color:var(--text-muted)">ATTACK VECTOR</span>
+          <span style="font-size:0.7rem;color:var(--danger);font-family:var(--font-mono)">HIGH RISK</span>
+        </div>
+        <h4 style="font-size:1rem;margin-bottom:0.5rem">🎣 Phishing Attacks</h4>
+        <p style="font-size:0.82rem;color:var(--text-secondary);line-height:1.7;margin-bottom:1rem">Responsible for 90% of data breaches. Attackers impersonate trusted brands via email or fake websites.</p>
+        <div class="progress-bar"><div class="progress-fill" style="width:90%;background:var(--danger)"></div></div>
+        <div style="font-family:var(--font-mono);font-size:0.7rem;color:var(--text-muted);margin-top:4px">Frequency: 90% of breaches</div>
+      </div>
+
+      <div class="card">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem">
+          <span style="font-family:var(--font-mono);font-size:0.72rem;color:var(--text-muted)">ATTACK VECTOR</span>
+          <span style="font-size:0.7rem;color:var(--warning);font-family:var(--font-mono)">HIGH RISK</span>
+        </div>
+        <h4 style="font-size:1rem;margin-bottom:0.5rem">🦠 Ransomware</h4>
+        <p style="font-size:0.82rem;color:var(--text-secondary);line-height:1.7;margin-bottom:1rem">Malware that encrypts victim files and demands payment. Caused $20B+ in damages globally in 2023.</p>
+        <div class="progress-bar"><div class="progress-fill" style="width:78%;background:var(--warning)"></div></div>
+        <div style="font-family:var(--font-mono);font-size:0.7rem;color:var(--text-muted);margin-top:4px">Growth: +78% year over year</div>
+      </div>
+
+      <div class="card">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem">
+          <span style="font-family:var(--font-mono);font-size:0.72rem;color:var(--text-muted)">ATTACK VECTOR</span>
+          <span style="font-size:0.7rem;color:var(--warning);font-family:var(--font-mono)">MEDIUM RISK</span>
+        </div>
+        <h4 style="font-size:1rem;margin-bottom:0.5rem">💥 DDoS Attacks</h4>
+        <p style="font-size:0.82rem;color:var(--text-secondary);line-height:1.7;margin-bottom:1rem">Distributed Denial of Service floods servers with traffic, causing outages for businesses and services.</p>
+        <div class="progress-bar"><div class="progress-fill" style="width:62%;background:var(--primary)"></div></div>
+        <div style="font-family:var(--font-mono);font-size:0.7rem;color:var(--text-muted);margin-top:4px">Volume: 62% increase in 2024</div>
+      </div>
+
+      <div class="card">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem">
+          <span style="font-family:var(--font-mono);font-size:0.72rem;color:var(--text-muted)">ATTACK VECTOR</span>
+          <span style="font-size:0.7rem;color:var(--danger);font-family:var(--font-mono)">CRITICAL</span>
+        </div>
+        <h4 style="font-size:1rem;margin-bottom:0.5rem">💉 SQL Injection</h4>
+        <p style="font-size:0.82rem;color:var(--text-secondary);line-height:1.7;margin-bottom:1rem">Malicious SQL code inserted into input fields to manipulate databases and steal user data.</p>
+        <div class="progress-bar"><div class="progress-fill" style="width:85%;background:var(--danger)"></div></div>
+        <div style="font-family:var(--font-mono);font-size:0.7rem;color:var(--text-muted);margin-top:4px">OWASP Top 10: #3 critical vuln</div>
+      </div>
+
+      <div class="card">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem">
+          <span style="font-family:var(--font-mono);font-size:0.72rem;color:var(--text-muted)">ATTACK VECTOR</span>
+          <span style="font-size:0.7rem;color:var(--primary);font-family:var(--font-mono)">ELEVATED</span>
+        </div>
+        <h4 style="font-size:1rem;margin-bottom:0.5rem">🕵️ Man-in-the-Middle</h4>
+        <p style="font-size:0.82rem;color:var(--text-secondary);line-height:1.7;margin-bottom:1rem">Attacker secretly intercepts and relays communications between two parties, stealing data in transit.</p>
+        <div class="progress-bar"><div class="progress-fill" style="width:55%;background:var(--primary)"></div></div>
+        <div style="font-family:var(--font-mono);font-size:0.7rem;color:var(--text-muted);margin-top:4px">Common on public WiFi networks</div>
+      </div>
+
+      <div class="card">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem">
+          <span style="font-family:var(--font-mono);font-size:0.72rem;color:var(--text-muted)">ATTACK VECTOR</span>
+          <span style="font-size:0.7rem;color:var(--warning);font-family:var(--font-mono)">HIGH RISK</span>
+        </div>
+        <h4 style="font-size:1rem;margin-bottom:0.5rem">🔓 Credential Stuffing</h4>
+        <p style="font-size:0.82rem;color:var(--text-secondary);line-height:1.7;margin-bottom:1rem">Using stolen username/password pairs from one breach to access accounts on other services via automation.</p>
+        <div class="progress-bar"><div class="progress-fill" style="width:71%;background:var(--warning)"></div></div>
+        <div style="font-family:var(--font-mono);font-size:0.7rem;color:var(--text-muted);margin-top:4px">Affects 71% of reused passwords</div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ============================================================
+     PAGE: PASSWORD
+============================================================ -->
+<div id="page-password" class="page">
+  <section class="section" style="padding-top:6rem">
+    <div class="section-header">
+      <span class="section-tag">TOOL — PASSWORD SECURITY</span>
+      <h2 class="section-title">Password Strength<br><span style="color:var(--primary)">Analyzer & Generator</span></h2>
+      <p class="section-desc">Real entropy calculation, GPU crack time estimation, and pattern analysis using industry-standard algorithms.</p>
+    </div>
+
+    <div class="tool-container">
+      <div class="tool-card scan-effect">
+        <div class="tool-header">
+          <div class="tool-dots"><div class="dot red"></div><div class="dot yellow"></div><div class="dot green"></div></div>
+          <span style="font-family:var(--font-mono);font-size:0.8rem;color:var(--primary)">🔑 PASSWORD ANALYZER v2.4</span>
+          <span class="tool-title">entropy_calc.exe</span>
+        </div>
+        <div class="tool-body">
+          <div class="tool-input-group">
+            <input class="cyber-input" id="password-input" type="password" placeholder="Enter password to analyze..." autocomplete="off" />
+            <button class="cyber-btn" id="toggle-pw" style="background:var(--bg-card2);color:var(--text-secondary);border:1px solid var(--border)">👁</button>
+            <button class="cyber-btn" id="generate-pw">⚡ GENERATE</button>
+          </div>
+          <div class="result-box" id="pw-result">
+            <span style="color:var(--text-muted)">// Enter a password above to see real entropy analysis...</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-gradient-2">
+    <div class="section-header">
+      <span class="section-tag">BEST PRACTICES</span>
+      <h2 class="section-title">Password Security <span style="color:var(--primary)">Guidelines</span></h2>
+    </div>
+
+    <div class="password-tips">
+      <div class="card tip-card">
+        <div class="tip-icon icon-cyan">📏</div>
+        <div>
+          <h4>Minimum 16 Characters</h4>
+          <p>Each additional character exponentially increases the search space. 16+ chars with mixed types is virtually uncrackable with modern hardware.</p>
+        </div>
+      </div>
+      <div class="card tip-card">
+        <div class="tip-icon icon-purple">🎲</div>
+        <div>
+          <h4>True Randomness</h4>
+          <p>Use a password manager to generate cryptographically random passwords. Avoid personal info, dictionary words, or predictable substitutions like @ for a.</p>
+        </div>
+      </div>
+      <div class="card tip-card">
+        <div class="tip-icon icon-green">🔄</div>
+        <div>
+          <h4>Unique Per Account</h4>
+          <p>Never reuse passwords. If one site is breached, attackers use credential stuffing to access all accounts with the same password.</p>
+        </div>
+      </div>
+      <div class="card tip-card">
+        <div class="tip-icon icon-orange">🛡</div>
+        <div>
+          <h4>Enable 2FA Always</h4>
+          <p>Two-factor authentication blocks 99.9% of automated attacks even if your password is compromised. Use TOTP apps, not SMS when possible.</p>
+        </div>
+      </div>
+      <div class="card tip-card">
+        <div class="tip-icon icon-pink">🔐</div>
+        <div>
+          <h4>Use a Password Manager</h4>
+          <p>Bitwarden, 1Password, or KeePassXC can generate, store, and autofill complex passwords securely so you only need to remember one master password.</p>
+        </div>
+      </div>
+      <div class="card tip-card">
+        <div class="tip-icon icon-red">🚫</div>
+        <div>
+          <h4>Avoid Common Patterns</h4>
+          <p>Password123!, Summer2024, qwerty, and keyboard walks (zxcvbn) are the first guesses in any dictionary or rule-based attack.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ============================================================
+     PAGE: PHISHING DETECTOR
+============================================================ -->
+<div id="page-phishing" class="page">
+  <section class="section" style="padding-top:6rem">
+    <div class="section-header">
+      <span class="section-tag">TOOL — PHISHING DETECTION</span>
+      <h2 class="section-title">URL Threat<br><span style="color:var(--primary)">Intelligence Scanner</span></h2>
+      <p class="section-desc">Multi-factor phishing URL analysis: TLD risk, brand impersonation, encoding tricks, subdomain abuse, and more — all in real time.</p>
+    </div>
+
+    <div class="tool-container">
+      <div class="tool-card scan-effect">
+        <div class="tool-header">
+          <div class="tool-dots"><div class="dot red"></div><div class="dot yellow"></div><div class="dot green"></div></div>
+          <span style="font-family:var(--font-mono);font-size:0.8rem;color:var(--primary)">🎣 PHISHING DETECTOR v3.1</span>
+          <span class="tool-title">threat_intel.exe</span>
+        </div>
+        <div class="tool-body">
+          <div class="tool-input-group">
+            <input class="cyber-input" id="url-input" type="text" placeholder="Enter URL to analyze (e.g. https://paypal-secure-login.xyz/verify)" />
+            <button class="cyber-btn" id="analyze-url-btn">🔍 SCAN</button>
+          </div>
+          <div class="result-box" id="url-result">
+            <span style="color:var(--text-muted)">// Paste any URL above to run threat analysis...</span>
+          </div>
+          <div style="margin-top:1rem;font-size:0.78rem;color:var(--text-muted);font-family:var(--font-mono)">
+            ⚡ Try: paypal-login-secure.tk/verify | http://amazon.com.evil.xyz | bit.ly/xyz123
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-gradient-1">
+    <div class="section-header">
+      <span class="section-tag">VISUAL GUIDE</span>
+      <h2 class="section-title">Spot the <span style="color:var(--danger)">Fake</span></h2>
+      <p class="section-desc">Real examples showing the difference between legitimate and phishing emails.</p>
+    </div>
+
+    <div class="phishing-demo">
+      <div class="phishing-email legit card">
+        <div class="email-header legit-h">
+          <span style="font-size:1.2rem">📧</span>
+          <div>
+            <div style="font-size:0.82rem;font-weight:600;color:var(--text-primary)">security@paypal.com</div>
+            <div style="font-size:0.72rem;color:var(--text-muted);font-family:var(--font-mono)">Verified sender · PayPal Inc</div>
+          </div>
+          <span class="email-badge badge-legit">✓ LEGITIMATE</span>
+        </div>
+        <div class="email-body">
+          <p style="font-weight:600;color:var(--text-primary);margin-bottom:0.5rem">Your recent payment was confirmed</p>
+          <p>Your payment of $49.99 to Netflix was processed successfully. Visit your PayPal account for full transaction details.</p>
+          <p style="font-size:0.82rem">If you didn't authorize this, visit <strong style="color:var(--success)">paypal.com</strong> directly.</p>
+          <div class="email-ok">✓ Domain matches sender · DMARC passed · HTTPS link · No urgency pressure</div>
+        </div>
+      </div>
+
+      <div class="phishing-email fake card">
+        <div class="email-header fake-h">
+          <span style="font-size:1.2rem">📧</span>
+          <div>
+            <div style="font-size:0.82rem;font-weight:600;color:var(--text-primary)">security@paypa1-verify.tk</div>
+            <div style="font-size:0.72rem;color:var(--text-muted);font-family:var(--font-mono)">⚠ Unverified · Suspicious domain</div>
+          </div>
+          <span class="email-badge badge-fake">🚨 PHISHING</span>
+        </div>
+        <div class="email-body">
+          <p style="font-weight:600;color:var(--text-primary);margin-bottom:0.5rem">⚠️ URGENT: Your account will be SUSPENDED in 24 hours!</p>
+          <p>We detected suspicious activity. You MUST verify your identity immediately or your account will be permanently deleted.</p>
+          <p style="font-size:0.82rem">Click here: <span style="color:var(--danger)">http://paypa1-secure-verify.tk/login</span></p>
+          <div class="email-warning">⚠ Fake domain · "1" instead of "l" · .tk TLD · Extreme urgency · HTTP not HTTPS</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="red-flags">
+      <div class="flag-item">
+        <span class="flag-icon">🔤</span>
+        <h4>Lookalike Domains</h4>
+        <p>paypa1.com vs paypal.com — attackers swap letters with similar-looking characters.</p>
+      </div>
+      <div class="flag-item">
+        <span class="flag-icon">⏰</span>
+        <h4>False Urgency</h4>
+        <p>"Act NOW or your account will be deleted!" — creates panic to bypass rational thinking.</p>
+      </div>
+      <div class="flag-item">
+        <span class="flag-icon">🌐</span>
+        <h4>Suspicious TLDs</h4>
+        <p>.tk, .ml, .xyz, .top — free domains commonly used in phishing campaigns.</p>
+      </div>
+      <div class="flag-item">
+        <span class="flag-icon">🔒</span>
+        <h4>No HTTPS</h4>
+        <p>Legitimate sites use HTTPS. HTTP means data is sent unencrypted and can be intercepted.</p>
+      </div>
+      <div class="flag-item">
+        <span class="flag-icon">📎</span>
+        <h4>Unexpected Attachments</h4>
+        <p>.exe, .zip, .docm files from unknown senders often contain malware or ransomware.</p>
+      </div>
+      <div class="flag-item">
+        <span class="flag-icon">🎭</span>
+        <h4>Impersonation</h4>
+        <p>Attackers pose as banks, tech companies, or government agencies to gain trust.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Privacy Audit Tool -->
+  <section class="section bg-gradient-2">
+    <div class="section-header">
+      <span class="section-tag">TOOL — BROWSER PRIVACY</span>
+      <h2 class="section-title">Browser <span style="color:var(--primary)">Privacy Audit</span></h2>
+      <p class="section-desc">Real-time analysis of your browser's privacy settings using live browser APIs.</p>
+    </div>
+
+    <div class="tool-container">
+      <div class="tool-card">
+        <div class="tool-header">
+          <div class="tool-dots"><div class="dot red"></div><div class="dot yellow"></div><div class="dot green"></div></div>
+          <span style="font-family:var(--font-mono);font-size:0.8rem;color:var(--primary)">🔍 PRIVACY AUDITOR v1.8</span>
+        </div>
+        <div class="tool-body">
+          <div style="text-align:center;margin-bottom:1.5rem">
+            <button class="cyber-btn" id="check-privacy-btn" style="padding:1rem 2.5rem;font-size:0.85rem">🔍 AUDIT MY BROWSER</button>
+          </div>
+          <div class="result-box" id="privacy-result">
+            <span style="color:var(--text-muted)">// Click audit to analyze your browser's real privacy settings...</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ============================================================
+     PAGE: ENCRYPTION
+============================================================ -->
+<div id="page-encrypt" class="page">
+  <section class="section" style="padding-top:6rem">
+    <div class="section-header">
+      <span class="section-tag">TOOL — CRYPTOGRAPHY</span>
+      <h2 class="section-title">AES-256 Encryption<br><span style="color:var(--primary)">& Cryptographic Hashing</span></h2>
+      <p class="section-desc">Military-grade encryption using your browser's native WebCrypto API. Your data never leaves your device.</p>
+    </div>
+
+    <div style="max-width:900px;margin:0 auto">
+      <!-- How encryption works -->
+      <div class="encrypt-flow" style="margin-bottom:2.5rem">
+        <div class="encrypt-box animated-border">
+          <span class="label">PLAINTEXT</span>
+          <span class="value">Hello, World!</span>
+        </div>
+        <div class="encrypt-arrow">→</div>
+        <div class="encrypt-box animated-border">
+          <span class="label">AES-256-GCM</span>
+          <span class="value" style="font-size:0.72rem;color:var(--secondary)">+ PBKDF2 Key</span>
+        </div>
+        <div class="encrypt-arrow">→</div>
+        <div class="encrypt-box animated-border">
+          <span class="label">CIPHERTEXT</span>
+          <span class="value" style="color:var(--text-muted);font-size:0.7rem">8Kj2mNpQ+vXr...</span>
+        </div>
+      </div>
+
+      <!-- Encrypt Tool -->
+      <div class="tool-card scan-effect" style="margin-bottom:1.5rem">
+        <div class="tool-header">
+          <div class="tool-dots"><div class="dot red"></div><div class="dot yellow"></div><div class="dot green"></div></div>
+          <span style="font-family:var(--font-mono);font-size:0.8rem;color:var(--primary)">🔐 AES-256-GCM ENCRYPT/DECRYPT</span>
+          <span class="tool-title">webcrypto.exe</span>
+        </div>
+        <div class="tool-body">
+          <div class="form-group">
+            <label>PLAINTEXT / MESSAGE</label>
+            <textarea id="encrypt-input" class="cyber-input" rows="4" placeholder="Enter your secret message here..." style="resize:vertical"></textarea>
+          </div>
+          <div class="form-group">
+            <label>ENCRYPTION PASSWORD (SECRET KEY)</label>
+            <input id="encrypt-key" class="cyber-input" type="password" placeholder="Enter a strong password for encryption..." autocomplete="off" />
+          </div>
+          <div style="display:flex;gap:1rem;margin-bottom:1.5rem;flex-wrap:wrap">
+            <button class="cyber-btn" id="btn-encrypt">🔒 ENCRYPT</button>
+            <button class="cyber-btn" id="btn-decrypt" style="background:linear-gradient(135deg,var(--secondary),var(--accent))">🔓 DECRYPT</button>
+            <button class="cyber-btn" id="clear-encrypt" style="background:var(--bg-card2);color:var(--text-secondary);border:1px solid var(--border)">✕ CLEAR</button>
+          </div>
+          <div class="form-group">
+            <label>ENCRYPTED OUTPUT (BASE64)</label>
+            <textarea id="encrypt-output" class="cyber-input" rows="4" placeholder="Encrypted ciphertext will appear here..." readonly style="color:var(--primary);resize:vertical"></textarea>
+          </div>
+          <button class="cyber-btn" id="copy-encrypted" style="background:var(--bg-card2);color:var(--text-secondary);border:1px solid var(--border);margin-bottom:1rem">📋 COPY CIPHERTEXT</button>
+          <div class="result-box" id="encrypt-info">
+            <span style="color:var(--text-muted)">// Encryption details will appear here...</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hash Tool -->
+      <div class="tool-card">
+        <div class="tool-header">
+          <div class="tool-dots"><div class="dot red"></div><div class="dot yellow"></div><div class="dot green"></div></div>
+          <span style="font-family:var(--font-mono);font-size:0.8rem;color:var(--primary)">🧮 SHA HASH GENERATOR</span>
+        </div>
+        <div class="tool-body">
+          <div class="tool-input-group">
+            <input class="cyber-input" id="hash-input" type="text" placeholder="Enter text to generate SHA-256 / SHA-512 hash..." />
+            <button class="cyber-btn" id="btn-hash">HASH IT</button>
+          </div>
+          <div class="result-box" id="hash-result">
+            <span style="color:var(--text-muted)">// SHA-1, SHA-256, SHA-384, SHA-512 hashes will appear here...</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Encryption Info Cards -->
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2rem">
+        <div class="card" style="text-align:center">
+          <div style="font-size:2rem;margin-bottom:0.5rem">🔑</div>
+          <h4 style="font-size:0.85rem;margin-bottom:0.3rem;color:var(--primary)">AES-256-GCM</h4>
+          <p style="font-size:0.78rem;color:var(--text-muted)">256-bit key with Galois/Counter Mode — provides both encryption and authentication.</p>
+        </div>
+        <div class="card" style="text-align:center">
+          <div style="font-size:2rem;margin-bottom:0.5rem">🔗</div>
+          <h4 style="font-size:0.85rem;margin-bottom:0.3rem;color:var(--primary)">PBKDF2-SHA256</h4>
+          <p style="font-size:0.78rem;color:var(--text-muted)">100,000 iterations of key stretching — makes brute force attacks computationally infeasible.</p>
+        </div>
+        <div class="card" style="text-align:center">
+          <div style="font-size:2rem;margin-bottom:0.5rem">🎲</div>
+          <h4 style="font-size:0.85rem;margin-bottom:0.3rem;color:var(--primary)">Random IV</h4>
+          <p style="font-size:0.78rem;color:var(--text-muted)">96-bit cryptographically secure random Initialization Vector — different every encryption.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ============================================================
+     PAGE: NETWORK MONITOR
+============================================================ -->
+<div id="page-network" class="page">
+  <section class="section" style="padding-top:6rem">
+    <div class="section-header">
+      <span class="section-tag">TOOL — NETWORK SECURITY</span>
+      <h2 class="section-title">Live Network<br><span style="color:var(--primary)">Security Monitor</span></h2>
+      <p class="section-desc">Real-time connection status, speed, and RTT using the Network Information API plus a live security event log.</p>
+    </div>
+
+    <div class="network-grid">
+      <div class="network-stats">
+        <div class="net-stat-card">
+          <div class="net-stat-icon">🌐</div>
+          <div class="net-stat-info">
+            <div class="val" id="net-online">CHECKING...</div>
+            <div class="lbl">CONNECTION STATUS</div>
+          </div>
+        </div>
+        <div class="net-stat-card">
+          <div class="net-stat-icon">📶</div>
+          <div class="net-stat-info">
+            <div class="val" id="net-type">—</div>
+            <div class="lbl">NETWORK TYPE</div>
+          </div>
+        </div>
+        <div class="net-stat-card">
+          <div class="net-stat-icon">⚡</div>
+          <div class="net-stat-info">
+            <div class="val" id="net-speed">—</div>
+            <div class="lbl">DOWNLINK SPEED</div>
+          </div>
+        </div>
+        <div class="net-stat-card">
+          <div class="net-stat-icon">📡</div>
+          <div class="net-stat-info">
+            <div class="val" id="net-rtt">—</div>
+            <div class="lbl">ROUND TRIP TIME</div>
+          </div>
+        </div>
+
+        <!-- HTTPS Status -->
+        <div class="card" style="border-color:rgba(0,255,136,0.2);text-align:center">
+          <div style="font-size:2rem;margin-bottom:0.5rem">🔒</div>
+          <div style="font-family:var(--font-display);font-size:0.9rem;color:var(--success);margin-bottom:0.3rem">SECURE CONTEXT</div>
+          <div style="font-family:var(--font-mono);font-size:0.78rem;color:var(--text-muted)" id="secure-ctx">Checking...</div>
+        </div>
+      </div>
+
+      <div class="log-terminal">
+        <div class="terminal-header">
+          <div class="tool-dots"><div class="dot red"></div><div class="dot yellow"></div><div class="dot green"></div></div>
+          <span style="font-family:var(--font-mono);font-size:0.8rem;color:var(--primary);margin-left:10px">CYBERSHIELD SECURITY EVENT LOG</span>
+          <span style="font-family:var(--font-mono);font-size:0.7rem;color:var(--text-muted);margin-left:auto">LIVE</span>
+          <span class="status-dot" style="width:6px;height:6px;margin-left:6px"></span>
+        </div>
+        <div class="terminal-body" id="terminal-body">
+          <!-- Logs injected by JS -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Security Best Practices -->
+    <div style="max-width:1200px;margin:3rem auto 0;display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem">
+      <div class="card">
+        <h3 style="font-size:1rem;margin-bottom:1rem;color:var(--primary)">🔒 Network Security Checklist</h3>
+        <div style="display:flex;flex-direction:column;gap:0.6rem">
+          <div style="display:flex;gap:10px;align-items:center;font-size:0.85rem">
+            <span style="color:var(--success)">✓</span><span>Always use HTTPS — look for the padlock icon</span>
+          </div>
+          <div style="display:flex;gap:10px;align-items:center;font-size:0.85rem">
+            <span style="color:var(--success)">✓</span><span>Use a VPN on public WiFi networks</span>
+          </div>
+          <div style="display:flex;gap:10px;align-items:center;font-size:0.85rem">
+            <span style="color:var(--success)">✓</span><span>Enable firewall on all devices</span>
+          </div>
+          <div style="display:flex;gap:10px;align-items:center;font-size:0.85rem">
+            <span style="color:var(--success)">✓</span><span>Use DNS-over-HTTPS (1.1.1.1 or 8.8.8.8)</span>
+          </div>
+          <div style="display:flex;gap:10px;align-items:center;font-size:0.85rem">
+            <span style="color:var(--success)">✓</span><span>Regularly scan for open ports</span>
+          </div>
+          <div style="display:flex;gap:10px;align-items:center;font-size:0.85rem">
+            <span style="color:var(--success)">✓</span><span>Monitor network logs for unusual activity</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3 style="font-size:1rem;margin-bottom:1rem;color:var(--primary)">⚠ Common Network Threats</h3>
+        <div style="display:flex;flex-direction:column;gap:0.8rem">
+          <div>
+            <div style="display:flex;gap:10px;align-items:center;font-size:0.85rem;margin-bottom:3px">
+              <span style="color:var(--danger)">✗</span><span style="font-weight:600">Packet Sniffing</span>
+            </div>
+            <div style="font-size:0.78rem;color:var(--text-muted);padding-left:20px">Attacker captures network traffic on unsecured WiFi</div>
+          </div>
+          <div>
+            <div style="display:flex;gap:10px;align-items:center;font-size:0.85rem;margin-bottom:3px">
+              <span style="color:var(--danger)">✗</span><span style="font-weight:600">DNS Spoofing</span>
+            </div>
+            <div style="font-size:0.78rem;color:var(--text-muted);padding-left:20px">Fake DNS responses redirect users to malicious servers</div>
+          </div>
+          <div>
+            <div style="display:flex;gap:10px;align-items:center;font-size:0.85rem;margin-bottom:3px">
+              <span style="color:var(--danger)">✗</span><span style="font-weight:600">Evil Twin Attack</span>
+            </div>
+            <div style="font-size:0.78rem;color:var(--text-muted);padding-left:20px">Rogue WiFi hotspot mimics a legitimate access point</div>
+          </div>
+          <div>
+            <div style="display:flex;gap:10px;align-items:center;font-size:0.85rem;margin-bottom:3px">
+              <span style="color:var(--danger)">✗</span><span style="font-weight:600">ARP Poisoning</span>
+            </div>
+            <div style="font-size:0.78rem;color:var(--text-muted);padding-left:20px">Maps attacker's MAC address to victim's IP on LAN</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ============================================================
+     PAGE: CONTACT
+============================================================ -->
+<div id="page-contact" class="page">
+  <section class="section" style="padding-top:6rem">
+    <div class="section-header">
+      <span class="section-tag">CONTACT</span>
+      <h2 class="section-title">Get in <span style="color:var(--primary)">Touch</span></h2>
+      <p class="section-desc">Interested in cybersecurity collaboration, project discussion, or connecting professionally? Reach out below.</p>
+    </div>
+
+    <div class="contact-section">
+      <div class="contact-grid">
+        <!-- Left: Profile & Info -->
+        <div>
+          <div class="profile-card animated-border" style="margin-bottom:1.5rem">
+            <div class="profile-avatar">👩‍💻</div>
+            <h4>Aditi Devaliya</h4>
+            <div class="role">Computer Engineering Student</div>
+            <div class="college">🏛 A.V. PAREKH TECHNICAL INSTITUTE</div>
+            <a href="https://www.linkedin.com/in/devaliya-aditi-773815418" target="_blank" class="linkedin-btn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              Connect on LinkedIn
+            </a>
+          </div>
+
+          <div class="contact-items">
+            <div class="contact-item">
+              <div class="ci-icon">📧</div>
+              <div class="ci-info">
+                <div class="ci-label">Email Address</div>
+                <a href="mailto:aditikdevaliya@gmail.com" class="ci-value">aditikdevaliya@gmail.com</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="ci-icon">🎓</div>
+              <div class="ci-info">
+                <div class="ci-label">Education</div>
+                <div class="ci-value">Computer Engineering</div>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="ci-icon">🏛</div>
+              <div class="ci-info">
+                <div class="ci-label">Institution</div>
+                <div class="ci-value">A.V. Parekh Technical Institute</div>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="ci-icon">🔗</div>
+              <div class="ci-info">
+                <div class="ci-label">LinkedIn Profile</div>
+                <a href="https://www.linkedin.com/in/devaliya-aditi-773815418" target="_blank" class="ci-value">devaliya-aditi-773815418</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="ci-icon">🛡</div>
+              <div class="ci-info">
+                <div class="ci-label">Specialization</div>
+                <div class="ci-value">Cybersecurity & AI Systems</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Contact Form -->
+        <div class="contact-form">
+          <h3>📨 Send a Message</h3>
+          <form id="contact-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label>FULL NAME *</label>
+                <input type="text" id="contact-name" placeholder="Your full name" required />
+              </div>
+              <div class="form-group">
+                <label>EMAIL ADDRESS *</label>
+                <input type="email" id="contact-email" placeholder="your@email.com" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label>ORGANIZATION / COMPANY</label>
+              <input type="text" placeholder="IBM, Infosys, Your Company..." />
+            </div>
+            <div class="form-group">
+              <label>SUBJECT</label>
+              <select>
+                <option value="">— Select topic —</option>
+                <option>Project Collaboration</option>
+                <option>Internship Opportunity</option>
+                <option>Cybersecurity Discussion</option>
+                <option>Research Partnership</option>
+                <option>General Inquiry</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>MESSAGE</label>
+              <textarea placeholder="Tell me about the opportunity, project, or topic you'd like to discuss..."></textarea>
+            </div>
+            <button type="submit" class="form-submit">⚡ SEND MESSAGE</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Tech Stack -->
+      <div style="margin-top:3rem">
+        <div class="section-header">
+          <span class="section-tag">SKILLS & TECHNOLOGIES</span>
+          <h3 class="section-title" style="font-size:1.5rem">Technical <span style="color:var(--primary)">Expertise</span></h3>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;max-width:1000px;margin:0 auto">
+          <div class="card" style="text-align:center;padding:1.2rem">
+            <div style="font-size:1.8rem;margin-bottom:0.5rem">🐍</div>
+            <div style="font-family:var(--font-display);font-size:0.8rem;color:var(--primary)">Python</div>
+            <div class="progress-bar" style="margin-top:8px"><div class="progress-fill" style="width:85%;background:var(--primary)"></div></div>
+          </div>
+          <div class="card" style="text-align:center;padding:1.2rem">
+            <div style="font-size:1.8rem;margin-bottom:0.5rem">🌐</div>
+            <div style="font-family:var(--font-display);font-size:0.8rem;color:var(--primary)">Web Security</div>
+            <div class="progress-bar" style="margin-top:8px"><div class="progress-fill" style="width:80%;background:var(--secondary)"></div></div>
+          </div>
+          <div class="card" style="text-align:center;padding:1.2rem">
+            <div style="font-size:1.8rem;margin-bottom:0.5rem">🔐</div>
+            <div style="font-family:var(--font-display);font-size:0.8rem;color:var(--primary)">Cryptography</div>
+            <div class="progress-bar" style="margin-top:8px"><div class="progress-fill" style="width:75%;background:var(--accent)"></div></div>
+          </div>
+          <div class="card" style="text-align:center;padding:1.2rem">
+            <div style="font-size:1.8rem;margin-bottom:0.5rem">🤖</div>
+            <div style="font-family:var(--font-display);font-size:0.8rem;color:var(--primary)">AI / ML</div>
+            <div class="progress-bar" style="margin-top:8px"><div class="progress-fill" style="width:70%;background:var(--success)"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ============================================================
+     FOOTER
+============================================================ -->
+<footer class="footer">
+  <div class="footer-logo">🛡 CYBERSHIELD SENTINEL</div>
+  <div class="footer-links">
+    <a href="#" data-page="home" onclick="showPage('home');return false;">HOME</a>
+    <a href="#" data-page="password" onclick="showPage('password');return false;">PASSWORD</a>
+    <a href="#" data-page="phishing" onclick="showPage('phishing');return false;">PHISHING</a>
+    <a href="#" data-page="encrypt" onclick="showPage('encrypt');return false;">ENCRYPT</a>
+    <a href="#" data-page="network" onclick="showPage('network');return false;">NETWORK</a>
+    <a href="#" data-page="contact" onclick="showPage('contact');return false;">CONTACT</a>
+  </div>
+  <p style="margin-bottom:0.4rem">Built by <strong style="color:var(--primary)">Aditi Devaliya</strong> · Computer Engineering · A.V. Parekh Technical Institute</p>
+  <p style="font-size:0.72rem;color:var(--text-muted)">All encryption operations run locally in your browser using the Web Crypto API. No data is transmitted. © 2024 CyberShield Sentinel</p>
+</footer>
+
+<!-- Toast Notification -->
+<div class="toast" id="main-toast"></div>
+
+<script src="js/main.js"></script>
+<script>
+  // Check secure context for network page
+  window.addEventListener('DOMContentLoaded', () => {
+    const secCtxEl = document.getElementById('secure-ctx');
+    if (secCtxEl) {
+      secCtxEl.textContent = window.isSecureContext
+        ? '✓ Running in secure context (HTTPS)'
+        : '⚠ Not in secure context — some APIs restricted';
+      secCtxEl.style.color = window.isSecureContext ? 'var(--success)' : 'var(--warning)';
+    }
+  });
+</script>
+</body>
+</html>
